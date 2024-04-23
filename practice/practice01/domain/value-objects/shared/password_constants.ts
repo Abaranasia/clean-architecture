@@ -1,4 +1,3 @@
-export const EMAILPATTERN = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 export const PASSWORD_PATTERNS = {
   pwdLength: 8,
@@ -7,6 +6,7 @@ export const PASSWORD_PATTERNS = {
   symbols: /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/,
   whiteSpace: /^\S*$/
 }
+
 export const PASSWORD_ERRORS = {
   invalidLength: 'Your password must be at least 8 characters',
   noLetters: 'Your password must contain at least one letter',
