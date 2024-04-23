@@ -1,5 +1,6 @@
 import { ValueObject } from "./ValueObject";
-import { EMAILPATTERN } from "./shared/constants";
+
+const EMAILPATTERN = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 export interface EmailProps {
   email: string
@@ -15,7 +16,7 @@ export class Email extends ValueObject<EmailProps> {
     // console.log(`The email ${this.email} has been succesfully created`)
   }
 
-  public getEmail(): string {
+  public get email(): string {
     console.log(`Your email is ${this.props.email}`);
     return this.props.email;
   }

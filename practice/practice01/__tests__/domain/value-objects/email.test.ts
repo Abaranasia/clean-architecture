@@ -12,7 +12,7 @@ describe('Tests of Name class methods', () => {
 
   test('should create a valid email', () => {
     const user = Email.create(goodEmail)
-    const userEmail = user.getEmail();
+    const userEmail = user.email;
 
     expect(userEmail === goodEmail)
   })
