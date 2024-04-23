@@ -1,6 +1,6 @@
 // Password validation including min and max length and including at least a special character
 import { ValueObject } from "./ValueObject";
-import { validatePassword } from "./shared/helpers";
+import { validatePassword } from "./shared/utils";
 
 export interface PasswordProps {
   password: string
