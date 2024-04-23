@@ -1,0 +1,28 @@
+CLEAN ARCHITECTURE
+
+High level dependencies: related with business
+
+Low level dependencies: relateds with implementation
+
+abstraction don't depend on implementation
+abstraction is defined by the owner
+
+Business includes now a repository abstraction (an interface) to communicate with the implementation that connects to repositories
+
+In Clean code, the business logic, defined by entities and value-objects, is the inner core and should be defined with primitives. This way the core logic of the application is way easier to test and can be independent of the UI
+
+Entities:
+	- related data that forms concepts
+	- simple concepts with invariants
+	- should be composed by business rules 
+	- created in pure language (not frameworks) 
+	- This makes it reusable among technologies
+	- Changes infrequently (technology does rapidly)
+
+value-objects
+
+Entities																		Value-objects (part of an entity)
+ - mutable with identity (need id)		 			- Inmutable types without identity (don't have id)
+ - validate invariants on business logic	 	- represent specific types of our domain
+ - Instances should be compared beyond id	 	- require equal functions to allow instance comparations
+	
