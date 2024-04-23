@@ -1,6 +1,4 @@
-import { PASSWORD_ERRORS, PASSWORD_PATTERNS } from "./constants";
-
-47
+import { PASSWORD_ERRORS, PASSWORD_PATTERNS } from "./password_constants";
 
 export const validatePassword = (password: string): Array<string> => {
 
