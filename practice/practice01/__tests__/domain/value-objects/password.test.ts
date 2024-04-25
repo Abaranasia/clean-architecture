@@ -8,7 +8,7 @@ describe('Tests of Password class methods', () => {
 
   test('should create a valid password', () => {
     const user = Password.create(validPassword)
-    const userPassword = user.getPassword();
+    const userPassword = user.password;
 
     expect(userPassword === validPassword)
   });

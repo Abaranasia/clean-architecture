@@ -15,7 +15,7 @@ export class Password extends ValueObject<PasswordProps> {
     // console.log(`The password ${this.password} has been succesfully created`)
   }
 
-  public getPassword(): string {
+  public get password(): string {
     console.log(`Your password is ${this.props.password}`);
     return this.props.password;
   }
