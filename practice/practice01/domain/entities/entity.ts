@@ -5,7 +5,7 @@ export interface EntityData { id: Id };
 const isEntity = (v: any): v is Entity => v instanceof Entity;
 
 export abstract class Entity implements EntityData {
-  protected constructor(public id: Id) { }
+  constructor(public id: Id) { }
 
   public equals(object?: Entity): boolean {
     if (object === null || object == undefined) {

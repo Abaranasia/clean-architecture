@@ -7,10 +7,10 @@ describe('Tests of User entity methods', () => {
     password: 'abcd.1234',
   }
 
-  test('should create two different users', () => {
+  test('should create a valid user', () => {
     const user = User.create(userMock)
-    const newUser = user.getUser();
-    console.log('newUser', newUser)
+   // const newUser = user;
+    console.log('newUser', user)
     // console.log('newUser', newUser.name.getName())
 
     expect(user.equals(user)).toBe(true)
