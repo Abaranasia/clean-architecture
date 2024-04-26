@@ -1,5 +1,13 @@
 CLEAN ARCHITECTURE
 
+KEY IDEAS:
+	- Technology <--> Adapters <--> Domain respecting the dependecy inversion
+	- Use cases should be executable from terminal
+
+1. Domain: contains the business rules of the Application; divided into app business rules and enterprise business rules
+  - Entities
+  - Value-objects
+
 High level dependencies: related with business
 
 Low level dependencies: relateds with implementation
@@ -25,4 +33,21 @@ Entities																		Value-objects (part of an entity)
  - mutable with identity (need id)		 			- Inmutable types without identity (don't have id)
  - validate invariants on business logic	 	- represent specific types of our domain
  - Instances should be compared beyond id	 	- require equal functions to allow instance comparations
+
+
+- Ports: 
+	- Are interface adapters added inbetween domain and UI or persistent layers
+	- SHould not expose the entities to extermal layers, but will imply a lot of noise and complexity
+- Application user rules 
+- Enterprise rules: independent rules
+- Use cases (interactors): 
+	- Their main pupose is coordinate
+	- Every action or functionality should be isolated in a class and communicate with the entities. 
+	- Made of pure language (no libs)
+	- It's reusable
+	- Starts always with a verb (getById, ..)
+	- translators like mongoose, motor, etc
 	
+Frameworks and Drivers:
+	- this layer changes frequently
+	- Could be UI, modules (coupled to libs), or DB connectors
