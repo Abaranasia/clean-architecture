@@ -9,9 +9,7 @@ describe('Tests of User entity methods', () => {
 
   test('should create a valid user', () => {
     const user = User.create(userMock)
-   // const newUser = user;
     console.log('newUser', user)
-    // console.log('newUser', newUser.name.getName())
 
     expect(user.equals(user)).toBe(true)
     expect(user).toBeInstanceOf(User);
