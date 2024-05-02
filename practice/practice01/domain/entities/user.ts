@@ -6,7 +6,7 @@ import { Name } from "../value-objects/Name";
 import { Email } from "../value-objects/Email";
 import { Password } from "../value-objects/Password";
 
-export class User extends Entity {
+export class User extends Entity<UserObjectData> {
   public readonly id: Id;
   public readonly name: Name;
   public readonly email: Email;
@@ -20,22 +20,27 @@ export class User extends Entity {
     this.password = data.password;
   }
 
-  public static create(data: UserData): User {
-    const id = Id.create();
-    const name = Name.create(data.name);
-    const email = Email.create(data.email);
-    const password = Password.create(data.password);
+  public static create(data: UserData): User {  
+    const userData: UserObjectData = {
+      id: !data.id ? Id.generate() : Id.create(data.id),
+      name: Name.create(data.name),
+      email: Email.create(data.email),
+      password: Password.create(data.password),
+    };
 
-    return new User({ id, name, email, password })
+    return new User(userData)
   }
 
   public get user(): UserObjectData {
-    return {
+    const userData = {
       id: this.id,
       name: this.name,
       email: this.email,
       password: this.password,
-    }
+    };
+    
+    return userData
+    
   }
 
   public update(props: UserData): User{
@@ -43,9 +48,4 @@ export class User extends Entity {
     return User.create(newData);
   };
 
-/*   public set user(props: UserData): void {
-    this.name = Name.create(props.name);
-    this.email = Email.create(props.email);
-    this.password = Password.create(props.password); 
-  } */
 }
