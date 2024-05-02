@@ -15,9 +15,14 @@ export class Id extends ValueObject<IdProps> {
     return this.props.id;
   }
 
-  public static create(): Id {
-    const id = uidGenerator()
+  public static create(id: string): Id {
+    if ((id).length == 0 ) {
+      throw new Error("Id is required");
+    }
+    return new Id({ id });
+  }
 
-    return new Id({ id })
+  public static generate(): Id {
+    return Id.create(uidGenerator())
   }
 }
