@@ -1,7 +1,7 @@
 import { ValueObject } from "./ValueObject";
 
 export interface NameProps {
-  name: string
+  value: string
 }
 
 export class Name extends ValueObject<NameProps> {
@@ -11,7 +11,7 @@ export class Name extends ValueObject<NameProps> {
   }
 
   public get name(): string {
-    return this.props.name;
+    return this.props.value;
   }
 
   // Not usable since value-objects should be inmutable
@@ -19,13 +19,13 @@ export class Name extends ValueObject<NameProps> {
     if (typeof (name) != "string" || !name || name.trim().length === 0) {
       throw new Error('Name is not valid');
     }
-    this.props.name = name
+    this.props.value = name
   }
 
   public static create(name: string): Name {
     if (!name || name.trim().length === 0) {
       throw new Error('Name is required');
     }
-    return new Name({ name: name.trim() })
+    return new Name({ value: name.trim() })
   }
 }

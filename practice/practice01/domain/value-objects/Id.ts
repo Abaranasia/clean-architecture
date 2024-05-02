@@ -2,7 +2,7 @@ import { ValueObject } from "./ValueObject";
 import { uidGenerator } from "./shared/utils";
 
 export interface IdProps {
-  id: string
+  value: string
 }
 
 export class Id extends ValueObject<IdProps> {
@@ -12,14 +12,14 @@ export class Id extends ValueObject<IdProps> {
   }
 
   public get id(): string {
-    return this.props.id;
+    return this.props.value;
   }
 
   public static create(id: string): Id {
     if ((id).length == 0 ) {
       throw new Error("Id is required");
     }
-    return new Id({ id });
+    return new Id({ value: id });
   }
 
   public static generate(): Id {

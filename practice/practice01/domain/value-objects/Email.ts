@@ -3,7 +3,7 @@ import { ValueObject } from "./ValueObject";
 const EMAILPATTERN = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 export interface EmailProps {
-  email: string
+  value: string
 }
 
 
@@ -14,7 +14,7 @@ export class Email extends ValueObject<EmailProps> {
   }
 
   public get email(): string {
-    return this.props.email;
+    return this.props.value;
   }
 
   public static validateEmail = (email: string): boolean => {
@@ -30,6 +30,6 @@ export class Email extends ValueObject<EmailProps> {
       throw new Error('Email is invalid');
     }
 
-    return new Email({ email: email.trim() })
+    return new Email({ value: email.trim() })
   }
 }

@@ -3,7 +3,7 @@ import { ValueObject } from "./ValueObject";
 import { validatePassword } from "./shared/utils";
 
 export interface PasswordProps {
-  password: string
+  value: string
 }
 
 export class Password extends ValueObject<PasswordProps> {
@@ -13,7 +13,7 @@ export class Password extends ValueObject<PasswordProps> {
   }
 
   public get password(): string {
-    return this.props.password;
+    return this.props.value;
   }
 
   public static create(password: string): Password {
@@ -25,6 +25,6 @@ export class Password extends ValueObject<PasswordProps> {
       throw new Error(`Password is invalid: ${validationErrors.join(", ")}`);
     }
 
-    return new Password({ password: password })
+    return new Password({ value: password })
   }
 }
