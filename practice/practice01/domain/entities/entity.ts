@@ -2,12 +2,12 @@ import { Id } from "../value-objects/Id";
 
 export interface EntityData { id: Id };
 
-const isEntity = (v: any): v is Entity => v instanceof Entity;
+const isEntity = (value: any): value is Entity<any> => value instanceof Entity;
 
-export abstract class Entity implements EntityData {
+export abstract class Entity<T> implements EntityData {
   constructor(public id: Id) { }
 
-  public equals(object?: Entity): boolean {
+  public equals(object?: Entity<T>): boolean {
     if (object === null || object == undefined) {
       return false;
     }
