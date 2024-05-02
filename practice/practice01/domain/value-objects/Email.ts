@@ -8,16 +8,12 @@ export interface EmailProps {
 
 
 export class Email extends ValueObject<EmailProps> {
-  // email: string;
 
   private constructor(props: EmailProps) {
     super(props)
-    // this.email = props.email;
-    // console.log(`The email ${this.email} has been succesfully created`)
   }
 
   public get email(): string {
-    console.log(`Your email is ${this.props.email}`);
     return this.props.email;
   }
 

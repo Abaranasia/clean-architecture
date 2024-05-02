@@ -7,16 +7,12 @@ export interface PasswordProps {
 }
 
 export class Password extends ValueObject<PasswordProps> {
-  // password: string;
 
   private constructor(props: PasswordProps) {
     super(props)
-    // this.password = props.password;
-    // console.log(`The password ${this.password} has been succesfully created`)
   }
 
   public get password(): string {
-    console.log(`Your password is ${this.props.password}`);
     return this.props.password;
   }
 
