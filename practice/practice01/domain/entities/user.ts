@@ -31,6 +31,11 @@ export class User extends Entity<UserObjectData> {
     return new User(userData)
   }
 
+  public update(props: UserData): User{
+    const newData = {...props}
+    return User.create(newData);
+  };
+
   public get user(): UserObjectData {
     const userData = {
       id: this.id,
@@ -40,12 +45,17 @@ export class User extends Entity<UserObjectData> {
     };
     
     return userData
-    
   }
 
-  public update(props: UserData): User{
-    const newData = {...props}
-    return User.create(newData);
-  };
+  public getName(): string{
+    return this.name.name
+  }
 
+  public getEmail(): string{
+    return this.email.email
+  }
+
+  public getPassword(): string{
+    return this.password.password
+  }
 }

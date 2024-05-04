@@ -36,7 +36,29 @@ describe('Tests of User entity methods', () => {
     }); 
 
     expect(result).toBeInstanceOf(User);
-    expect(user1.equals(result)).not.toBe(false)
-    expect(user1.name.equals(result.name)).not.toBe(true)
+    expect(user1.equals(result)).not.toBe(false);
+    expect(user1.name.equals(result.name)).not.toBe(true);
+  })
+
+  test('should return the name of the user', () => {
+    const user1 = User.create(userMock);
+
+    expect (user1.getName()).toBe(userMock.name);
+    expect (user1.getName()).toBe(user1.name.name);
+  })
+
+  test('should return the email of the user', () => {
+    const user1 = User.create(userMock);
+
+    expect (user1.getEmail()).toBe(userMock.email);
+    expect (user1.getEmail()).toBe(user1.email.email);
+    
+  })
+
+  test('should return the password of the user', () => {
+    const user1 = User.create(userMock);
+
+    expect (user1.getPassword()).toBe(userMock.password);
+    expect (user1.getPassword()).toBe(user1.password.password);
   })
 })
