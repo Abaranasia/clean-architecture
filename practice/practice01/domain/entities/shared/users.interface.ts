@@ -16,3 +16,9 @@ export interface UserData {
   email: string;
   password: string;
 }
+
+export interface UsersObjectData {
+  users: {
+   [key: string]: UserObjectData,
+  };
+}
