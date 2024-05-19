@@ -17,7 +17,7 @@ export interface UserData {
   password: string;
 }
 
-export type UsersArrayData = UserObjectData[];
+export type UsersListData = UserObjectData[];
   
  export interface UsersObjectData {
    // [key: string]: UserObjectData,
