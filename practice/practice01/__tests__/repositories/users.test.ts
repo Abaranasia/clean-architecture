@@ -21,7 +21,8 @@ describe('Tests of Users entity methods', () => {
       const result = userList.users.filter((user) => user.id === newUser.id)
       
       expect(userList.users.length).not.toBe(0);
-      expect(result).not.toEqual({});
+      expect(result).not.toEqual([]);
+      expect(result).toEqual([newUser]);
     });
 
     test('should be able to add new users to a list of users', () => {
@@ -38,17 +39,35 @@ describe('Tests of Users entity methods', () => {
       expect(userList.users.length).toBe(2)
     }); 
 
-    test('should return a user from a list of users by its id', () => {
+    test('getUsers should return a list of users', () => {
       const newUser = User.create(userMock1)
-      const userList=Users.create(newUser)
+      const userList= Users.create(newUser)
+
+      expect (userList.getUsers()).not.toEqual([])
+      expect (userList.getUsers()).toEqual([newUser])
+    });
+
+    test('getById should return a user from a list of users by its id', () => {
+      const newUser = User.create(userMock1)
+      const userList= Users.create(newUser)
 
       expect (userList.getById(newUser.id.id)).toEqual(newUser)
     });
   
-    test('should return a user from a list of users by its email', () => {
+    test('getByEmail should return a user from a list of users by its email', () => {
       const newUser = User.create(userMock1)
-      const userList=Users.create(newUser)
+      const userList= Users.create(newUser)
 
       expect (userList.getByEmail(newUser.email.email)).toEqual(newUser)
+    });
+
+    test('removeUser should return a userList with from a list of users by its email', () => {
+      const newUser = User.create(userMock1)
+      const userList= Users.create(newUser)
+      
+      userList.removeUser(newUser.getId());
+      
+      expect (userList.users.length).toBe(0)
+      expect (userList.getUsers()).toEqual([])
     });
   })
