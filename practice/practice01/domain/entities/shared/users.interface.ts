@@ -17,8 +17,9 @@ export interface UserData {
   password: string;
 }
 
-export interface UsersObjectData {
-  users: {
+export type UsersArrayData = UserObjectData[];
+  
+ export interface UsersObjectData {
+   // [key: string]: UserObjectData,
    [key: string]: UserObjectData,
-  };
-}
+} 
