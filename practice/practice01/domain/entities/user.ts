@@ -47,6 +47,10 @@ export class User extends Entity<UserObjectData> {
     return userData
   }
 
+  public getId(): Id{
+    return this.id
+  }
+  
   public getName(): string{
     return this.name.name
   }
