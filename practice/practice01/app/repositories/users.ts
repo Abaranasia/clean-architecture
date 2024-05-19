@@ -10,14 +10,26 @@ export class Users {
 
     private constructor (user: UserObjectData) {
         this.users = {
-        ...this.users,
         [user.id.id]: user,
         };
     }
 
-    public static addUser(props: UserData): Users {
+    public static create(props: UserData): Users {
         const user = User.create(props);
         
         return new Users(user)
+    } 
+
+    public addUser(props: UserData): void {
+        const user = User.create(props);
+        
+        this.users = {
+            ...this.users,
+            [user.id.id]: user,
+            };
     }
+
+    public getUsers(): UsersObjectData {
+        return this.users
+      }
 }
