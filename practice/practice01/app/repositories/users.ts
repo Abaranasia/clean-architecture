@@ -1,17 +1,15 @@
 import { 
     UserData, 
     UserObjectData, 
-    UsersObjectData,
+    UsersListData, 
 } from "../../domain/entities/shared/users.interface";
 import { User } from "../../domain/entities/user";
 
 export class Users {
-    public users: UsersObjectData;
+    public users: UsersListData;
 
     private constructor (user: UserObjectData) {
-        this.users = {
-        [user.id.id]: user,
-        };
+        this.users = [user];
     }
 
     public static create(props: UserData): Users {
@@ -23,13 +21,13 @@ export class Users {
     public addUser(props: UserData): void {
         const user = User.create(props);
         
-        this.users = {
+        this.users = [
             ...this.users,
-            [user.id.id]: user,
-            };
+            user,
+            ];
     }
 
-    public getUsers(): UsersObjectData {
+    public getUsers(): UsersListData {
         return this.users
       }
 }
