@@ -38,6 +38,6 @@ export class Users {
     }
 
     public removeUser(userId: Id): void {
-        this.users.filter(user => user.id != userId); 
+        this.users= this.users.filter(user => user.id !== userId); 
     }
 }
