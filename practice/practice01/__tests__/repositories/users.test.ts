@@ -7,19 +7,28 @@ describe('Tests of Users entity methods', () => {
       password: 'abcd.1234',
     };
 
-     const userMock2 = {
-        name: 'Pipo',
-        email: 'pipo@gmail.com',
-        password: 'cdef.1234',
-      };  
+    const userMock2 = {
+      name: 'Pipo',
+      email: 'pipo@gmail.com',
+      password: 'cdef.1234',
+    };  
 
-    test('should create a valid user', () => {
+    test('should create a valid list of users', () => {
       const userList=Users.create(userMock1)
-      console.log('userList.getUsers() 1 :>> ', userList.getUsers());
+      const result = userList.users.filter((user) => user.email.email === userMock1.email)
+      
+      expect(userList.users.length).not.toBe(0);
+      expect(result).not.toEqual({});
+      });
+
+    test('should be able to add new users to a list of users', () => {
+      const userList=Users.create(userMock1)
+      const userList1 =  userList.getUsers();
+
       userList.addUser(userMock2)
-      console.log('userList.getUsers() 2 :>> ', userList.getUsers());
-        
-/*         expect(user.equals(user)).toBe(true)
-        expect(user).toBeInstanceOf(User); */
+      const userList2 =  userList.getUsers();
+      
+      expect(userList1).not.toEqual(userList2);
+      expect(userList.users.length).toBe(2)
       });
     })
