@@ -31,7 +31,7 @@ export class User extends Entity<UserObjectData> {
     return new User(userData)
   }
 
-  public update(props: UserData): User{
+  public static update(props: UserData): User{
     const newData = {...props}
     return User.create(newData);
   };
