@@ -1,12 +1,13 @@
-import { User } from "../../domain/entities/user";
+
 import { IUserRepository } from "../adapters/iUserRepository";
+import { User } from "../domain/entities/user";
 
 export class GetByEmailUseCase {
     constructor (
         private userRepository: IUserRepository
     )
     {}
-    async execute (email: string): Promise<User | unknown> {
+    async execute (email: string): Promise<User | null> {
         try {
             const user= await this.userRepository.getByEmail(email)
             
