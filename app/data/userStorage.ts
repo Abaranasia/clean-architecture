@@ -4,13 +4,10 @@ import { Id } from "../domain/value-objects/Id";
 export class UserStorage {
     public users: User[];
 
-    private constructor (user: User) {
-        this.users = [user];
+    public constructor () {
+        this.users = []
     }
 
-    public static create(user: User): User[] {
-        return new UserStorage(user)
-    }  
 
     public addUser(user: User): void {      
         this.users = [
