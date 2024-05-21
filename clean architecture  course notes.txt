@@ -29,8 +29,8 @@ Entities:
 
 value-objects
 
-Entities																		Value-objects (part of an entity)
- - mutable with identity (need id)		 			- Inmutable types without identity (don't have id)
+Entities										Value-objects (part of an entity)
+ - mutable with identity (need id)		 		- Inmutable types without identity (don't have id)
  - validate invariants on business logic	 	- represent specific types of our domain
  - Instances should be compared beyond id	 	- require equal functions to allow instance comparations
 
@@ -46,8 +46,8 @@ Entities																		Value-objects (part of an entity)
 3. Ports: 
 	- Are interface adapters added inbetween domain and UI or persistent layers
 	- SHould not expose the entities to extermal layers, but will imply a lot of noise and complexity
-- Application user rules 
-- Enterprise rules: independent rules
+	- Application user rules 
+	- Enterprise rules: independent rules
 
 	
 4. Frameworks and Drivers:
