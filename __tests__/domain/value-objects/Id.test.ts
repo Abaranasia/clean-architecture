@@ -1,4 +1,4 @@
-import { Id } from "../../../domain/value-objects/Id"
+import { Id } from "../../../app/domain/value-objects/Id";
 
 describe('Tests of Id class methods', () => {
 

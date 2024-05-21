@@ -1,5 +1,6 @@
-import { Password } from "../../../domain/value-objects/Password"
-import { PASSWORD_ERRORS } from "../../../domain/value-objects/shared/password_constants";
+import { Password } from "../../../app/domain/value-objects/Password";
+import { PASSWORD_ERRORS } from "../../../app/domain/value-objects/shared/password_constants";
+
 
 describe('Tests of Password class methods', () => {
   const validPassword = "abcd.1234"

@@ -1,4 +1,5 @@
-import { Email } from "../../../domain/value-objects/Email";
+import { Email } from "../../../app/domain/value-objects/Email";
+
 
 describe('Tests of Name class methods', () => {
   const goodEmail = 'pepe@gmail.com';

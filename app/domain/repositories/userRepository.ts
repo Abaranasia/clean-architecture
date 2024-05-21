@@ -1,4 +1,5 @@
-import { IUserRepository } from "../adapters/iUserRepository";
+
+import { IUserRepository } from "../../adapters/iUserRepository";
 import { UserData, UsersListData } from "../../domain/entities/shared/users.interface";
 import { User } from "../../domain/entities/user";
 import { Users } from "./users";

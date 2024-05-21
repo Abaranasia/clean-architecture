@@ -1,5 +1,6 @@
-import { Users } from "../../app/repositories/users";
-import { User } from "../../domain/entities/user";
+import { User } from "../../../app/domain/entities/user";
+import { Users } from "../../../app/domain/repositories/users";
+
 
 describe('Tests of Users entity methods', () => {
     const userMock1 = {

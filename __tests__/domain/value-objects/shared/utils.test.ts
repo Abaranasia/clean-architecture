@@ -1,5 +1,6 @@
-import { uidGenerator, validatePassword } from "../../../../domain/value-objects/shared/utils"
-import { PASSWORD_ERRORS } from "../../../../domain/value-objects/shared/password_constants"
+import { PASSWORD_ERRORS } from "../../../../app/domain/value-objects/shared/password_constants"
+import { uidGenerator, validatePassword } from "../../../../app/domain/value-objects/shared/utils"
+
 
 describe('Tests of ValidatePassword helper function', () => {
   test('should return no errors with a valid password', () => {
