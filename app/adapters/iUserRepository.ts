@@ -1,10 +1,10 @@
-import { UserData, UsersListData } from "../../domain/entities/shared/users.interface";
-import { User } from "../../domain/entities/user";
+import { UserData } from "../domain/entities/shared/users.interface";
+import { User } from "../domain/entities/user";
 
 export interface IUserRepository {
-    getByEmail(email: string): Promise<User | unknown>;     
-    getById(id: string): Promise<User | unknown>;
-    getAll(): Promise<UsersListData | unknown>;
+    getByEmail(email: string): Promise<User | null>;     
+    getAll(): Promise<User[] | null>;
     createUser(newUser: UserData): Promise<User>;
-    updateUser(newUser: UserData): Promise<User>; 
+    // getById(id: string): Promise<User | null>;
+    // updateUser(newUser: UserData): Promise<User>; 
 }
