@@ -16,10 +16,3 @@ export interface UserData {
   email: string;
   password: string;
 }
-
-export type UsersListData = UserObjectData[];
-  
- export interface UsersObjectData {
-   // [key: string]: UserObjectData,
-   [key: string]: UserObjectData,
-} 
