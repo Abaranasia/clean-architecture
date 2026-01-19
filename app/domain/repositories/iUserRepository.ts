@@ -1,4 +1,4 @@
-import { User, UserData } from "../domain/entities/users/user";
+import { User, UserData } from "../entities/users/user";
 
 
 

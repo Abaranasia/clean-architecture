@@ -1,4 +1,4 @@
-import { UserStorage } from "../../app/data/userStorage";
+import { UserStorage } from "../../app/data/api/userStorage";
 import { User } from "../../app/domain/entities/users/user";
 
 

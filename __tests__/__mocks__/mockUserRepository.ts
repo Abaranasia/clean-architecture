@@ -1,4 +1,4 @@
-import { IUserRepository } from "../../app/adapters/iUserRepository";
+import { IUserRepository } from "../../app/domain/repositories/iUserRepository";
 import { mockUser1, mockUser2 } from "./userEntity";
 
 export const mockUserRepository: IUserRepository = {

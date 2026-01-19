@@ -1,6 +1,6 @@
 
-import { User } from "../domain/entities/users/user";
-import { Id } from "../domain/value-objects/Id";
+import { User } from "../../domain/entities/users/user";
+import { Id } from "../../domain/value-objects/Id";
 
 export class UserStorage {
     public users: User[];

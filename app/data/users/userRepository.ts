@@ -1,8 +1,8 @@
 
-import { IUserRepository } from "../../adapters/iUserRepository";
+import { IUserRepository } from "../../domain/repositories/iUserRepository";
 
-import { UserStorage } from "../../data/userStorage";
-import { User, UserData } from "../entities/users/user";
+import { UserStorage } from "../api/userStorage";
+import { User, UserData } from "../../domain/entities/users/user";
 
 export class UserRepository implements IUserRepository {
 

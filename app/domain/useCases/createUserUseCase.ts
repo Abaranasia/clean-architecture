@@ -1,7 +1,5 @@
-
-import { IUserRepository } from "../adapters/iUserRepository";
-import { UserData } from "../domain/entities/users/user";
-
+import { UserData } from "../entities/users/user"
+import { IUserRepository } from "../repositories/iUserRepository"
 
 export class CreateUserUseCase {
     constructor (
