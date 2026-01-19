@@ -83,7 +83,7 @@ export class User extends Entity<UserObjectData> {
 
   public toJSON(): UserData{
     return {
-      id: this.getId() ?? '',
+      id: this.getId(),
       name: this.getName(),
       email: this.getEmail(),
       password: this.getPassword(),

@@ -60,4 +60,22 @@ describe("Tests of User entity methods", () => {
     expect(user1.getPassword()).toBe(userMock.password);
     expect(user1.getPassword()).toBe(user1.password.password);
   });
+
+  test("shold return JSON user", () => {
+    const userMockWithId = {
+      id: "123",
+      ...userMock,
+    };
+
+    const user1 = User.create(userMockWithId);
+    expect(user1.toJSON()).toEqual(userMockWithId);
+  });
+
+  test("shold return JSON user with generated id", () => {
+    const user1 = User.create(userMock);
+
+    expect(user1.toJSON().name).toBe(userMock.name);
+    expect(user1.toJSON().email).toBe(userMock.email);
+    expect(user1.toJSON().id).toBeDefined();
+  });
 });
