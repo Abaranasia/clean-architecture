@@ -1,5 +1,5 @@
-import { User } from "../entities/users/user";
-import { UserRepository } from "../repositories/UserRepository";
+import { UserRepository } from "../domain/repositories/UserRepository";
+import { User } from "../domain/entities/users/user";
 
 export class GetByEmailUseCase {
   constructor(private userRepository: UserRepository) {}

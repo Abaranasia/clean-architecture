@@ -1,9 +1,9 @@
 import { User } from "../entities/users/user";
-import { IUserRepository } from "../repositories/iUserRepository";
+import { UserRepository } from "../repositories/UserRepository";
 
 export class GetAllUseCase {
     constructor (
-        private userRepository: IUserRepository
+        private userRepository: UserRepository
     )
     {}
     async execute (): Promise<User[] | null> {
