@@ -65,8 +65,8 @@ export class User extends Entity<UserObjectData> {
     return userData
   }
 
-  public getId(): Id{
-    return this.id
+  public getId(): string{
+    return this.id.id
   }
   
   public getName(): string{
@@ -79,5 +79,14 @@ export class User extends Entity<UserObjectData> {
 
   public getPassword(): string{
     return this.password.password
+  }
+
+  public toJSON(): UserData{
+    return {
+      id: this.getId() ?? '',
+      name: this.getName(),
+      email: this.getEmail(),
+      password: this.getPassword(),
+    }
   }
 }

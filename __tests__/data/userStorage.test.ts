@@ -76,7 +76,7 @@ describe('Tests of Users entity methods', () => {
         const userList= new UserStorage();
         const newUser = User.create(userMock1)
       
-        userList.removeUser(newUser.getId());
+        userList.removeUser(newUser.id);
         
         expect (userList.users.length).toBe(0)
         expect (userList.getUsers()).toEqual([])
