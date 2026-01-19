@@ -1,5 +1,5 @@
-import { UserData } from "../domain/entities/shared/users.interface";
-import { User } from "../domain/entities/user";
+
+import { User, UserData } from "../domain/entities/user";
 
 export interface IUserRepository {
     getByEmail(email: string): Promise<User | null>;     

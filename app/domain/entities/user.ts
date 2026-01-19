@@ -1,10 +1,23 @@
 import { Entity } from "./entity"
-import { UserData, UserObjectData } from "./shared/users.interface";
 
 import { Id } from "../value-objects/Id";
 import { Name } from "../value-objects/Name";
 import { Email } from "../value-objects/Email";
 import { Password } from "../value-objects/Password";
+
+export interface UserObjectData {
+  id: Id;
+  name: Name;
+  email: Email;
+  password: Password;
+}
+
+export interface UserData {
+  id?: string,
+  name: string;
+  email: string;
+  password: string;
+}
 
 export class User extends Entity<UserObjectData> {
   public readonly id: Id;
