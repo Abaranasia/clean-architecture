@@ -1,6 +1,7 @@
 
 import { IUserRepository } from "../adapters/iUserRepository";
-import { User } from "../domain/entities/user";
+import { User } from "../domain/entities/users/user";
+
 
 export class GetByEmailUseCase {
     constructor (

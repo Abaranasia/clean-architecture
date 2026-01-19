@@ -1,6 +1,7 @@
 
 import { IUserRepository } from "../adapters/iUserRepository";
-import { UserData } from "../domain/entities/shared/users.interface";
+import { UserData } from "../domain/entities/users/user";
+
 
 export class CreateUserUseCase {
     constructor (

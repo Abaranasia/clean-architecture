@@ -1,5 +1,6 @@
 import { UserStorage } from "../../app/data/userStorage";
-import { User } from "../../app/domain/entities/user";
+import { User } from "../../app/domain/entities/users/user";
+
 
 describe('Tests of Users entity methods', () => {
     const userMock1 = {

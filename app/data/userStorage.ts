@@ -1,4 +1,5 @@
-import { User } from "../domain/entities/user";
+
+import { User } from "../domain/entities/users/user";
 import { Id } from "../domain/value-objects/Id";
 
 export class UserStorage {

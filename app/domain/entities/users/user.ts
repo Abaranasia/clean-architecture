@@ -1,9 +1,9 @@
-import { Entity } from "./entity"
+import { Entity } from "../../entities/shared/entity"
 
-import { Id } from "../value-objects/Id";
-import { Name } from "../value-objects/Name";
-import { Email } from "../value-objects/Email";
-import { Password } from "../value-objects/Password";
+import { Id } from "../../value-objects/Id";
+import { Name } from "../../value-objects/Name";
+import { Email } from "../../value-objects/Email";
+import { Password } from "../../value-objects/Password";
 
 export interface UserObjectData {
   id: Id;

@@ -1,4 +1,4 @@
-import { User } from "../../app/domain/entities/user";
+import { User } from "../../app/domain/entities/users/user";
 
 export const mockUser1 = User.create({
     name: 'Pepe',

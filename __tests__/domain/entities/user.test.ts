@@ -1,4 +1,5 @@
-import { User } from "../../../app/domain/entities/user"
+import { User } from "../../../app/domain/entities/users/user"
+
 
 
 describe('Tests of User entity methods', () => {
