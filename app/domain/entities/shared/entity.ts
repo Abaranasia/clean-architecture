@@ -1,4 +1,4 @@
-import { Id } from "../value-objects/Id";
+import { Id } from "../../value-objects/Id";
 
 export interface EntityData { id: Id };
 
