@@ -30,7 +30,7 @@ describe('Tests of User entity methods', () => {
     const user1 = User.create(userMock)
     
     // Review this:
-    const result = User.update({
+    const result = user1.update({
       name: 'José',
       id: user1.id.id,
       email: user1.email.email,

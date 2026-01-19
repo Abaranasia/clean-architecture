@@ -44,10 +44,15 @@ export class User extends Entity<UserObjectData> {
     return new User(userData)
   }
 
-  public static update(props: UserData): User{
-    const newData = {...props}
-    return User.create(newData);
-  };
+  public update(props: UserData): User {
+    const updatedUser: UserObjectData = {
+      id: props.id ? Id.create(props.id) : this.id,
+      name: props.name ? Name.create(props.name) : this.name,
+      email: props.email ? Email.create(props.email) : this.email,
+      password: props.password ? Password.create(props.password) : this.password,
+    };
+    return new User(updatedUser);
+  }
 
   public get user(): UserObjectData {
     const userData = {
