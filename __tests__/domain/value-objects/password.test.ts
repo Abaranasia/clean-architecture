@@ -1,5 +1,5 @@
-import { Password } from "../../../app/domain/value-objects/Password";
-import { PASSWORD_ERRORS } from "../../../app/domain/value-objects/shared/password_constants";
+import { Password } from "../../../src/domain/value-objects/Password";
+import { PASSWORD_ERRORS } from "../../../src/domain/value-objects/shared/password_constants";
 
 
 describe('Tests of Password class methods', () => {

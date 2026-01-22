@@ -1,4 +1,4 @@
-import { Name } from "../../../app/domain/value-objects/Name";
+import { Name } from "../../../src/domain/value-objects/Name";
 
 describe('Tests of Name class methods', () => {
   const goodName = 'Pepe';

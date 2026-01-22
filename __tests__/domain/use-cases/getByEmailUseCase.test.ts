@@ -1,6 +1,6 @@
 
 
-import { GetByEmailUseCase } from "../../../app/domain/useCases/getByEmailUseCase";
+import { GetByEmailUseCase } from "../../../src/domain/useCases/getByEmailUseCase";
 import { mockUserRepository } from "../../__mocks__/mockUserRepository";
 import { mockUser1 } from "../../__mocks__/userEntity";
 

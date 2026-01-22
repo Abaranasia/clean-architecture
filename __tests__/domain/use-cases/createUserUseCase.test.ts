@@ -1,6 +1,6 @@
 
-import { CreateUserUseCase } from "../../../app/domain/useCases/createUserUseCase";
-import { GetAllUseCase } from "../../../app/domain/useCases/getAllUseCase";
+import { CreateUserUseCase } from "../../../src/domain/useCases/createUserUseCase";
+import { GetAllUseCase } from "../../../src/domain/useCases/getAllUseCase";
 
 import { mockUserRepository } from "../../__mocks__/mockUserRepository";
 import { mockUser1, mockUser2 } from "../../__mocks__/userEntity";

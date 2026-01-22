@@ -1,5 +1,5 @@
-import { UserStorage } from "../../app/data/api/userStorage";
-import { User } from "../../app/domain/entities/users/user";
+import { UserStorage } from "../../src/data/api/userStorage";
+import { User } from "../../src/domain/entities/users/user";
 
 
 describe('Tests of Users entity methods', () => {

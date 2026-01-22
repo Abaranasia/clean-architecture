@@ -1,4 +1,4 @@
-import { Email } from "../../../app/domain/value-objects/Email";
+import { Email } from "../../../src/domain/value-objects/Email";
 
 
 describe('Tests of Name class methods', () => {
