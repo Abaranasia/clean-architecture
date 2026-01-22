@@ -3,6 +3,7 @@ import { CreateUserUseCase } from "./domain/useCases/createUserUseCase";
 import { GetAllUseCase } from "./domain/useCases/getAllUseCase";
 import { UserApiRepository } from "./data/users/userRepository";
 import { UserStorage } from "./data/api/userStorage";
+import { User, UserData } from "./domain/entities/users/user";
 
 // Set up dependencies
 const userStorage = new UserStorage();
@@ -11,25 +12,16 @@ const createUserUseCase = new CreateUserUseCase(userRepository);
 const getAllUseCase = new GetAllUseCase(userRepository);
 const userController = new UserController(createUserUseCase, getAllUseCase);
 
-const newUsers = [
-  {
-    name: "John Doe",
-    email: "john.doe@example.com",
-    password: "password123!",
-  },
-    {
-    name: "Ann Doe",
-    email: "ann.doe@example.com",
-    password: "password345!",
-  },
-    {
-    name: "Pep Doe",
-    email: "pepe.doe@example.com",
-    password: "hell0Kitty!",
-  },
-];
+const listUsers = (userList: User[]) => {
+  userList.forEach((user, index) => {
+    console.log(
+      `${index + 1}. Name: ${user.getName()}, Email: ${user.getEmail()}`,
+    );
+  });
+};
+
 // Example usage
-async function main() {
+async function main(newUsers: UserData[]) {
   try {
     // Create all users from the newUsers array
     for (const userData of newUsers) {
@@ -40,9 +32,7 @@ async function main() {
     const allUsers = await userController.getAllUsers();
     if (allUsers) {
       console.log("\nAll Users:");
-      allUsers.forEach((user, index) => {
-        console.log(`${index + 1}. Name: ${user.getName()}, Email: ${user.getEmail()}`);
-      });
+      listUsers(allUsers);
     } else {
       console.log("No users found");
     }
