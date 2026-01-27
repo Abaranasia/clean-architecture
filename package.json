@@ -21,6 +21,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "commander": "^14.0.2",
     "figlet": "^1.9.4",
     "promptly": "^3.2.0",
     "ts-node": "^10.9.1"
