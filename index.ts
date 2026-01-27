@@ -1,8 +1,9 @@
+import figlet from "figlet";
+import promptly from "promptly";
+
 import { sleep } from "./src/presentation/utils/utils";
 import { createInitialUsers, listAllUsers, addNewUser } from "./src/app";
 
-const figlet = require("figlet");
-const promptly = require("promptly");
 console.log(figlet.textSync("Clean ArchiKata"));
 
 const newUsers = [
