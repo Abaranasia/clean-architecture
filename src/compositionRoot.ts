@@ -1,4 +1,3 @@
-// import { UserController } from "./presentation/controllers/UserController";
 import { CreateUserUseCase } from "./domain/useCases/createUserUseCase";
 import { GetAllUseCase } from "./domain/useCases/getAllUseCase";
 import { GetByEmailUseCase } from "./domain/useCases/getByEmailUseCase";
