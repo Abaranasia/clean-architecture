@@ -8,22 +8,13 @@ import {
   searchUserByEmail,
 } from "./app";
 
+import { displayMenu } from "./presentation/utils/utils";
+
 const MENU_OPTIONS = {
   LIST: "1",
   ADD: "2",
   SEARCH: "3",
   EXIT: "0",
-};
-
-const displayMenu = () => {
-  console.log("\n╔════════════════════════════════════╗");
-  console.log("║      User Management System        ║");
-  console.log("╠════════════════════════════════════╣");
-  console.log("║  1. List all users                 ║");
-  console.log("║  2. Add new user                   ║");
-  console.log("║  3. Search user by email           ║");
-  console.log("║  0. Exit                           ║");
-  console.log("╚════════════════════════════════════╝\n");
 };
 
 const handleMenuChoice = async (choice: string) => {
@@ -41,7 +32,7 @@ const handleMenuChoice = async (choice: string) => {
       console.log("\n👋 Goodbye!\n");
       process.exit(0);
     default:
-      console.log("\n❌ Invalid option. Please try again.\n");
+      console.log("\nInvalid option. Please try again.\n");
   }
 };
 
